@@ -24,15 +24,13 @@ public class Retirement {
 
 	public double MonthlySavings() {
 
-		//TODO: Calculate AmountToSave
 		double pmt = PMT((dAnnualReturnWorking / 100) / 12, (double) (iYearsToWork * 12), 0,TotalAmountToSave(),false);
 		pmt = Math.round(pmt * 100.0) / 100.0;
 		return pmt;
 	}
 
 	public double TotalAmountToSave() {
-		
-		//TODO: Calculate the Total Amount Requried to save
+
 		double pv = PV((dAnnualReturnRetired / 100) / 12,(double) (iYearsRetired * 12),dRequiredIncome - dMonthlySSI,0,false);
 		pv = Math.round(pv * 100.0) / 100.0;
 		return pv;
